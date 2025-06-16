@@ -33,7 +33,7 @@ Users should be able to:
 
 ### What I learned
 
-- how to insert an image that displays differently on various devices using the <source> tag
+- how to insert an image that displays differently on various devices using the source tag
 - how to add an icon inside a button by using the ::before pseudo-element.
 
 ## Author
