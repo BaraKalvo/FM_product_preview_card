@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: hsl(30, 38%, 92%);
+    --color-text: hsl(228, 12%, 48%);
+    --color-title: black;
+    --color-primary: hsl(158, 36%, 37%);
+    --color-primary-dark: hsl(158, 42%, 18%);
+    
+}
+
+body {
+    margin: 0;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+.card {
+    min-width: 18rem;
+    max-width: 34rem;
+    border-radius: 8px;
+
+    background-color: white;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-badge {
+    margin: 0;
+
+    font-size: 0.75rem;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+}
+
+.card-title {
+    margin-block: 1.5rem;
+
+    color: var(--color-title);
+}
+
+.card-title,
+.current-price {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    margin: 0;
+
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.card-prices {
+    margin-block: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.current-price {
+    margin-block: 0;
+    
+    color: var(--color-primary);
+}
+
+.former-price {
+    margin: 0;
+    font-size: 0.81rem;
+    line-height: 1.2;
+    text-decoration: line-through;
+}
+
+.button {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.1;
+    cursor: pointer;
+
+}
+
+.button::before {
+    content: url(images/icon-cart.svg);
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.button:hover,
+.button:active,
+.button:focus-visible {
+    background-color: var(--color-primary-dark);
+}
+
+@media screen and (min-width: 768px) {
+
+    .card {
+        max-width: 37.5rem;
+        display: flex;
+    }
+
+    picture {
+        width: 50%;
+    }
+
+    .card-image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-content {
+        width: 50%;
+    }
+
+    .card-prices {
+        margin-block: 2rem;
+    }
+}
