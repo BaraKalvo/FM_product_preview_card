@@ -55,7 +55,7 @@ body {
 
     font-size: 0.75rem;
     line-height: 1.2;
-    letter-spacing: 5px;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
 
 }
@@ -64,6 +64,8 @@ body {
     margin-block: 1.5rem;
 
     color: var(--color-title);
+    line-height: 1;
+
 }
 
 .card-title,
@@ -92,6 +94,7 @@ body {
     margin-block: 0;
     
     color: var(--color-primary);
+    line-height: 1.1;
 }
 
 .former-price {
@@ -121,7 +124,7 @@ body {
 .button::before {
     content: url(images/icon-cart.svg);
     vertical-align: middle;
-    margin-right: 8px;
+    margin-right: 0.5rem;
 }
 
 .button:hover,
@@ -130,7 +133,7 @@ body {
     background-color: var(--color-primary-dark);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
 
     .card {
         max-width: 37.5rem;
@@ -148,9 +151,13 @@ body {
 
     .card-content {
         width: 50%;
+    
     }
 
-    .card-prices {
-        margin-block: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
     }
 }
